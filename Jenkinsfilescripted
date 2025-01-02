@@ -1,0 +1,13 @@
+node{
+  stage('Bulid'){
+    echo 'building '
+  }
+  stage('Test'){
+    echo 'Testing'
+  }
+  if(currentBuild.result=="SUCCESS"){
+    echo "Looks Good"
+  }else{
+    echo "failed"
+  }
+}
